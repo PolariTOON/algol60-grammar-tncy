@@ -1,0 +1,218 @@
+:root {
+	--outer-size-x: 21cm;
+	--outer-size-y: 29.7cm;
+	--inner-size-x: 80rem;
+	--inner-size-y: 120rem;
+	--margin-x: calc((100vw - var(--outer-size-x)) / 2);
+	--margin-y: calc((100vh - var(--outer-size-y)) / 2);
+	--padding-x: calc((var(--outer-size-x) - var(--inner-size-x)) / 2);
+	--padding-y: calc((var(--outer-size-y) - var(--inner-size-y)) / 2);
+}
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	vertical-align: top;
+	line-height: inherit;
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+}
+html {
+	font-size: 10px; /* 1rem */
+}
+body {
+	margin: 0;
+	line-height: 1.25;
+	font-family: serif;
+	font-size: 1.6rem; /* 1.6rem */
+}
+body::before,
+body::after {
+	content: "";
+	display: table;
+	pointer-events: none;
+}
+h1 {
+	margin: 2rem;
+	font-size: 3.2rem;
+	counter-reset: h2 h3 h4;
+	counter-increment: h1;
+}
+h2 {
+	margin: 2rem;
+	font-size: 2.8rem;
+	counter-reset: h3 h4;
+	counter-increment: h2;
+}
+h2::before {
+	content: counter(h2) ". ";
+}
+h3 {
+	margin: 2rem;
+	font-size: 2.4rem;
+	counter-reset: h4;
+	counter-increment: h3;
+}
+h3::before {
+	content: counter(h2) "." counter(h3) ". ";
+}
+h4 {
+	margin: 2rem;
+	font-size: 2rem;
+	counter-increment: h4;
+}
+h4::before {
+	content: counter(h2) "." counter(h3) "." counter(h4) ". ";
+}
+p {
+	margin: 2rem;
+}
+dl {
+	margin: 2rem;
+	font-family: monospace;
+	font-weight: bold;
+}
+dl > div {
+	padding: 1rem 2rem;
+}
+dl > div > dt {
+	z-index: 1;
+	white-space: pre-wrap;
+	transform: perspective(0);
+}
+dl > div > dt:target {
+	background-color: #fc3;
+}
+dl > div > dt::after {
+	content: "";
+	position: absolute;
+	left: -2rem;
+	top: -1rem;
+	width: 0;
+	height: calc(100% + 2rem);
+	box-shadow: 0 0 0 .1rem #fff, -.2rem 0 0 .1rem currentColor, .2rem 0 0 .1rem currentColor;
+	pointer-events: none;
+}
+dl > div > dd {
+	margin-left: 0;
+	padding-left: 8ch;
+	white-space: pre-wrap;
+	transform: perspective(0);
+}
+dl > div > dd::before {
+	display: inline-block;
+	font-weight: normal;
+	text-indent: -8ch;
+}
+dl > div > dt + dd::before {
+	content: "::=\a0 ";
+}
+dl > div > dd + dd::before {
+	content: "|\a0 ";
+}
+dl > div > dd::after {
+	content: "";
+	position: absolute;
+	left: -2rem;
+	top: -1rem;
+	width: 0;
+	height: calc(100% + 2rem);
+	box-shadow: 0 0 0 .1rem currentColor, inset 0 0 0 .1rem currentColor;
+	pointer-events: none;
+}
+table {
+	empty-cells: hide;
+	border-spacing: 0;
+	margin: 2rem;
+	width: calc(100% - 4rem);
+	font-family: monospace;
+	font-weight: bold;
+}
+table > thead > tr > th {
+	z-index: 1;
+	vertical-align: middle;
+	text-align: center;
+	padding: 1rem 2rem;
+	transform: perspective(0);
+	box-shadow: 0 0 0 .1rem currentColor, inset 0 0 0 .1rem currentColor;
+}
+table > thead > tr > th::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 100%;
+	width: 100%;
+	height: 0;
+	box-shadow: 0 0 0 .1rem #fff, 0 -.2rem 0 .1rem currentColor, 0 .2rem 0 .1rem currentColor;
+	pointer-events: none;
+}
+table > tbody > tr > td {
+	padding: 1rem 2rem;
+	white-space: pre-wrap;
+	transform: perspective(0);
+}
+table > tbody > tr > td::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	box-shadow: 0 0 0 .1rem currentColor, inset 0 0 0 .1rem currentColor;
+	pointer-events: none;
+}
+hr {
+	display: table;
+	width: calc(100% - 4rem);
+	height: 0;
+	margin: 0;
+	border: 0;
+	-webkit-page-break-before: always;
+	-webkit-column-break-before: always;
+	-webkit-region-break-before: always;
+	page-break-before: always;
+	break-before: page;
+}
+a {
+	font-style: italic;
+	font-weight: normal;
+	text-decoration: inherit;
+}
+a::before {
+	content: "<";
+}
+a::after {
+	content: ">";
+}
+a[href] {
+	color: #369;
+	cursor: pointer;
+}
+a[href]:hover,
+a[href]:focus {
+	color: #69c;
+	text-decoration: underline;
+}
+a:not([href]) {
+	color: #c66;
+	cursor: not-allowed;
+}
+@media print {
+	@page {
+		size: A4 portrait;
+		margin: 0;
+	}
+	html {
+		float: left;
+		width: 100%;
+		font-size: 6.25pt;
+	}
+	body {
+		box-decoration-break: clone;
+		margin: calc(var(--margin-y) + var(--padding-y)) calc(var(--margin-x) + var(--padding-x));
+	}
+	hr {
+		margin: 2rem 2rem -2rem 2rem;
+	}
+}

@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" type="text/css" href="./index.css"/>
+		<script type="module" src="./index.mjs"></script>
+		<title>Algol 60 grammar (tncy)</title>
+	</head>
+	<body>
+		<h1>Algol 60 grammar (tncy)</h1>
+		<dl>
+			<div>
+				<dt>empty</dt>
+				<dd></dd>
+			</div>
+		</dl>
+		<h2>Basic Symbols</h2>
+		<dl>
+			<div>
+				<dt>basic symbol</dt>
+				<dd><a>letter</a></dd>
+				<dd><a>digit</a></dd>
+				<dd><a>logical value</a></dd>
+				<dd><a>delimiter</a></dd>
+			</div>
+		</dl>
+		<h3>Letters</h3>
+		<dl>
+			<div>
+				<dt>letter</dt>
+				<dd>a</dd>
+				<dd>b</dd>
+				<dd>c</dd>
+				<dd>d</dd>
+				<dd>e</dd>
+				<dd>f</dd>
+				<dd>g</dd>
+				<dd>h</dd>
+				<dd>i</dd>
+				<dd>j</dd>
+				<dd>k</dd>
+				<dd>l</dd>
+				<dd>m</dd>
+				<dd>n</dd>
+				<dd>o</dd>
+				<dd>p</dd>
+				<dd>q</dd>
+				<dd>r</dd>
+				<dd>s</dd>
+				<dd>t</dd>
+				<dd>u</dd>
+				<dd>v</dd>
+				<dd>w</dd>
+				<dd>x</dd>
+				<dd>y</dd>
+				<dd>z</dd>
+				<dd>A</dd>
+				<dd>B</dd>
+				<dd>C</dd>
+				<dd>D</dd>
+				<dd>E</dd>
+				<dd>F</dd>
+				<dd>G</dd>
+				<dd>H</dd>
+				<dd>I</dd>
+				<dd>J</dd>
+				<dd>K</dd>
+				<dd>L</dd>
+				<dd>M</dd>
+				<dd>N</dd>
+				<dd>O</dd>
+				<dd>P</dd>
+				<dd>Q</dd>
+				<dd>R</dd>
+				<dd>S</dd>
+				<dd>T</dd>
+				<dd>U</dd>
+				<dd>V</dd>
+				<dd>W</dd>
+				<dd>X</dd>
+				<dd>Y</dd>
+				<dd>Z</dd>
+			</div>
+		</dl>
+		<h4>Digits</h4>
+		<dl>
+			<div>
+				<dt>digit</dt>
+				<dd>0</dd>
+				<dd>1</dd>
+				<dd>2</dd>
+				<dd>3</dd>
+				<dd>4</dd>
+				<dd>5</dd>
+				<dd>6</dd>
+				<dd>7</dd>
+				<dd>8</dd>
+				<dd>9</dd>
+			</div>
+		</dl>
+		<h4>Logical values</h4>
+		<dl>
+			<div>
+				<dt>logical value</dt>
+				<dd>true</dd>
+				<dd>false</dd>
+			</div>
+		</dl>
+		<h3>Delimiters</h3>
+		<dl>
+			<div>
+				<dt>delimiter</dt>
+				<dd><a>operator</a></dd>
+				<dd><a>separator</a></dd>
+				<dd><a>bracket</a></dd>
+				<dd><a>declarator</a></dd>
+				<dd><a>specificator</a></dd>
+			</div>
+			<div>
+				<dt>operator</dt>
+				<dd><a>arithmetic operator</a></dd>
+				<dd><a>relational operator</a></dd>
+				<dd><a>logical operator</a></dd>
+				<dd><a>sequential operator</a></dd>
+			</div>
+			<div>
+				<dt>arithmetic operator</dt>
+				<dd>&plus;</dd>
+				<dd>&minus;</dd>
+				<dd>&times;</dd>
+				<dd>/</dd>
+				<dd>&divide;</dd>
+				<dd>&uarr;</dd>
+			</div>
+			<div>
+				<dt>relational operator</dt>
+				<dd>&lt;</dd>
+				<dd>&leq;</dd>
+				<dd>=</dd>
+				<dd>&geq;</dd>
+				<dd>&gt;</dd>
+				<dd>&ne;</dd>
+			</div>
+			<div>
+				<dt>logical operator</dt>
+				<dd>&equiv;</dd>
+				<dd>&sup;</dd>
+				<dd>&or;</dd>
+				<dd>&and;</dd>
+				<dd>&not;</dd>
+			</div>
+			<div>
+				<dt>sequential operator</dt>
+				<dd>go to</dd>
+				<dd>if</dd>
+				<dd>then</dd>
+				<dd>else</dd>
+				<dd>for</dd>
+				<dd>do</dd>
+			</div>
+			<div>
+				<dt>separator</dt>
+				<dd>,</dd>
+				<dd>.</dd>
+				<dd>&#9192;</dd>
+				<dd>:</dd>
+				<dd>;</dd>
+				<dd>:=</dd>
+				<dd>&blank;</dd>
+				<dd>step</dd>
+				<dd>until</dd>
+				<dd>while</dd>
+				<dd>comment</dd>
+			</div>
+			<div>
+				<dt>bracket</dt>
+				<dd>(</dd>
+				<dd>)</dd>
+				<dd>[</dd>
+				<dd>]</dd>
+				<dd>&#11810;</dd>
+				<dd>&#11811;</dd>
+				<dd>begin</dd>
+				<dd>end</dd>
+			</div>
+			<div>
+				<dt>declarator</dt>
+				<dd>own</dd>
+				<dd>Boolean</dd>
+				<dd>integer</dd>
+				<dd>real</dd>
+				<dd>array</dd>
+				<dd>switch</dd>
+				<dd>procedure</dd>
+			</div>
+			<div>
+				<dt>specificator</dt>
+				<dd>string</dd>
+				<dd>label</dd>
+				<dd>value</dd>
+			</div>
+		</dl>
+		<table>
+			<thead>
+				<tr>
+					<th scope="col">The sequence</th>
+					<th scope="col">is equivalent to</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>; comment <a>any sequence of zero or more characters not containing ;</a> ;</td>
+					<td>;</td>
+				</tr>
+				<tr>
+					<td>begin comment <a>any sequence of zero or more characters not containing ;</a> ;</td>
+					<td>begin</td>
+				</tr>
+			</tbody>
+		</table>
+		<h3>Identifiers</h3>
+		<dl>
+			<div>
+				<dt>identifier</dt>
+				<dd><a>letter</a></dd>
+				<dd><a>identifier</a> <a>letter</a></dd>
+				<dd><a>identifier</a> <a>digit</a></dd>
+			</div>
+		</dl>
+		<h3>Numbers</h3>
+		<dl>
+			<div>
+				<dt>unsigned integer</dt>
+				<dd><a>digit</a></dd>
+				<dd><a>unsigned integer</a> <a>digit</a></dd>
+			</div>
+			<div>
+				<dt>integer</dt>
+				<dd><a>unsigned integer</a></dd>
+				<dd>&plus; <a>unsigned integer</a></dd>
+				<dd>&minus; <a>unsigned integer</a></dd>
+			</div>
+			<div>
+				<dt>decimal fraction</dt>
+				<dd>. <a>unsigned integer</a></dd>
+			</div>
+			<div>
+				<dt>exponential part</dt>
+				<dd>&#9192; <a>integer</a></dd>
+			</div>
+			<div>
+				<dt>decimal number</dt>
+				<dd><a>unsigned integer</a></dd>
+				<dd><a>decimal fraction</a></dd>
+				<dd><a>unsigned integer</a> <a>decimal fraction</a></dd>
+			</div>
+			<div>
+				<dt>unsigned number</dt>
+				<dd><a>decimal number</a></dd>
+				<dd><a>decimal number</a> <a>exponential part</a></dd>
+			</div>
+			<div>
+				<dt>number</dt>
+				<dd><a>unsigned number</a></dd>
+				<dd>&plus; <a>unsigned number</a></dd>
+				<dd>&minus; <a>unsigned number</a></dd>
+			</div>
+		</dl>
+		<h3>Strings</h3>
+		<dl>
+			<div>
+				<dt>proper string</dt>
+				<dd><a>any sequence of characters not containing &#11810; or &#11811;</a></dd>
+				<dd><a>empty</a></dd>
+			</div>
+			<div>
+				<dt>open string</dt>
+				<dd><a>proper string</a></dd>
+				<dd><a>proper string</a> <a>closed string</a> <a>open string</a></dd>
+			</div>
+			<div>
+				<dt>closed string</dt>
+				<dd>&#11810; <a>open string</a> &#11811;</dd>
+			</div>
+			<div>
+				<dt>string</dt>
+				<dd><a>closed string</a></dd>
+				<dd><a>closed string</a> <a>string</a></dd>
+			</div>
+		</dl>
+		<h2>Expressions</h2>
+		<dl>
+			<div>
+				<dt>expression</dt>
+				<dd><a>arithmetic expression</a></dd>
+				<dd><a>Boolean expression</a></dd>
+				<dd><a>designational expression</a></dd>
+			</div>
+		</dl>
+		<h3>Variables</h3>
+		<dl>
+			<div>
+				<dt>variable identifier</dt>
+				<dd><a>identifier</a></dd>
+			</div>
+			<div>
+				<dt>simple variable</dt>
+				<dd><a>variable identifier</a></dd>
+			</div>
+			<div>
+				<dt>subscript expression</dt>
+				<dd><a>arithmetic expression</a></dd>
+			</div>
+			<div>
+				<dt>subscript list</dt>
+				<dd><a>subscript expression</a></dd>
+				<dd><a>subscript list</a> , <a>subscript expression</a></dd>
+			</div>
+			<div>
+				<dt>array identifier</dt>
+				<dd><a>identifier</a></dd>
+			</div>
+			<div>
+				<dt>subscripted variable</dt>
+				<dd><a>array identifier</a> [ <a>subscript list</a> ]</dd>
+			</div>
+			<div>
+				<dt>variable</dt>
+				<dd><a>simple variable</a></dd>
+				<dd><a>subscripted variable</a></dd>
+			</div>
+		</dl>
+		<h3>Function designators</h3>
+		<dl>
+			<div>
+				<dt>procedure identifier</dt>
+				<dd><a>identifier</a></dd>
+			</div>
+			<div>
+				<dt>actual parameter</dt>
+				<dd><a>string</a></dd>
+				<dd><a>expression</a></dd>
+				<dd><a>array identifier</a></dd>
+				<dd><a>switch identifier</a></dd>
+				<dd><a>procedure identifier</a></dd>
+			</div>
+			<div>
+				<dt>letter string</dt>
+				<dd><a>letter</a></dd>
+				<dd><a>letter string</a> <a>letter</a></dd>
+			</div>
+			<div>
+				<dt>parameter delimiter</dt>
+				<dd>,</dd>
+				<dd>) <a>letter string</a> : (</dd>
+			</div>
+			<div>
+				<dt>actual parameter list</dt>
+				<dd><a>actual parameter</a></dd>
+				<dd><a>actual parameter list</a> <a>parameter delimiter</a> <a>actual parameter</a></dd>
+			</div>
+			<div>
+				<dt>actual parameter part</dt>
+				<dd><a>empty</a></dd>
+				<dd>( <a>actual parameter list</a> )</dd>
+			</div>
+			<div>
+				<dt>function designator</dt>
+				<dd><a>procedure identifier</a> <a>actual parameter part</a></dd>
+			</div>
+		</dl>
+		<h3>Arithmetic expressions</h3>
+		<dl>
+			<div>
+				<dt>adding operator</dt>
+				<dd>&plus;</dd>
+				<dd>&minus;</dd>
+			</div>
+			<div>
+				<dt>multiplying operator</dt>
+				<dd>&times;</dd>
+				<dd>/</dd>
+				<dd>&divide;</dd>
+			</div>
+			<div>
+				<dt>primary</dt>
+				<dd><a>unsigned number</a></dd>
+				<dd><a>variable</a></dd>
+				<dd><a>function designator</a></dd>
+				<dd>( <a>arithmetic expression</a> )</dd>
+			</div>
+			<div>
+				<dt>factor</dt>
+				<dd><a>primary</a></dd>
+				<dd><a>factor</a></dd>
+				<dd><a>factor</a> &uarr; <a>primary</a></dd>
+			</div>
+			<div>
+				<dt>term</dt>
+				<dd><a>factor</a></dd>
+				<dd><a>term</a> <a>multiplying operator</a> <a>factor</a></dd>
+			</div>
+			<div>
+				<dt>simple arithmetic expression</dt>
+				<dd><a>term</a></dd>
+				<dd><a>adding operator</a> <a>term</a></dd>
+				<dd><a>simple arithmetic expression</a> <a>adding operator</a> <a>term</a></dd>
+			</div>
+			<div>
+				<dt>if clause</dt>
+				<dd>if <a>Boolean expression</a> then</dd>
+			</div>
+			<div>
+				<dt>arithmetic expression</dt>
+				<dd><a>simple arithmetic expression</a></dd>
+				<dd><a>if clause</a> <a>simple arithmetic expression</a> else <a>arithmetic expression</a></dd>
+			</div>
+		</dl>
+		<h3>Boolean expressions</h3>
+		<dl>
+			<div>
+				<dt>relational operator</dt>
+				<dd>&lt;</dd>
+				<dd>&leq;</dd>
+				<dd>=</dd>
+				<dd>&geq;</dd>
+				<dd>&gt;</dd>
+				<dd>&ne;</dd>
+			</div>
+			<div>
+				<dt>relation</dt>
+				<dd><a>simple arithmetic expression</a> <a>relational operator</a> <a>simple arithmetic expression</a></dd>
+			</div>
+			<div>
+				<dt>Boolean primary</dt>
+				<dd><a>logical value</a></dd>
+				<dd><a>variable</a></dd>
+				<dd><a>function designator</a></dd>
+				<dd><a>relation</a></dd>
+				<dd>( <a>Boolean expression</a> )</dd>
+			</div>
+			<div>
+				<dt>Boolean secondary</dt>
+				<dd><a>Boolean primary</a></dd>
+				<dd>¬ <a>Boolean primary</a></dd>
+			</div>
+			<div>
+				<dt>Boolean factor</dt>
+				<dd><a>Boolean secondary</a></dd>
+				<dd><a>Boolean factor</a> &and; <a>Boolean secondary</a></dd>
+			</div>
+			<div>
+				<dt>Boolean term</dt>
+				<dd><a>Boolean factor</a></dd>
+				<dd><a>Boolean term</a> &or; <a>Boolean factor</a></dd>
+			</div>
+			<div>
+				<dt>implication</dt>
+				<dd><a>Boolean term</a></dd>
+				<dd><a>implication</a> &sup; <a>Boolean term</a></dd>
+			</div>
+			<div>
+				<dt>simple Boolean</dt>
+				<dd><a>implication</a></dd>
+				<dd><a>simple Boolean</a> &equiv; <a>implication</a></dd>
+			</div>
+			<div>
+				<dt>Boolean expression</dt>
+				<dd><a>simple Boolean</a></dd>
+				<dd><a>if clause</a> <a>simple Boolean</a> else <a>Boolean expression</a></dd>
+			</div>
+		</dl>
+		<h3>Designational expressions</h3>
+		<dl>
+			<div>
+				<dt>label</dt>
+				<dd><a>identifier</a></dd>
+				<dd><a>unsigned integer</a></dd>
+			</div>
+			<div>
+				<dt>switch identifier</dt>
+				<dd><a>identifier</a></dd>
+			</div>
+			<div>
+				<dt>switch designator</dt>
+				<dd><a>switch identifier</a> [ <a>subscript expression</a> ]</dd>
+			</div>
+			<div>
+				<dt>simple designational expression</dt>
+				<dd><a>label</a></dd>
+				<dd><a>switch designator</a></dd>
+				<dd>( <a>designational expression</a> )</dd>
+			</div>
+			<div>
+				<dt>designational expression</dt>
+				<dd><a>simple designational expression</a></dd>
+				<dd><a>if clause</a> <a>simple designational expression</a> else <a>designational expression</a></dd>
+			</div>
+		</dl>
+		<h2>Statements</h2>
+		<h3>Compound statements and blocks</h3>
+		<dl>
+			<div>
+				<dt>unlabelled basic statement</dt>
+				<dd><a>assignment statement</a></dd>
+				<dd><a>go to statement</a></dd>
+				<dd><a>dummy statement</a></dd>
+				<dd><a>procedure statement</a></dd>
+			</div>
+			<div>
+				<dt>basic statement</dt>
+				<dd><a>unlabelled basic statement</a></dd>
+				<dd><a>label</a> : <a>basic statement</a></dd>
+			</div>
+			<div>
+				<dt>unconditional statement</dt>
+				<dd><a>basic statement</a></dd>
+				<dd><a>compound statement</a></dd>
+				<dd><a>block</a></dd>
+			</div>
+			<div>
+				<dt>statement</dt>
+				<dd><a>unconditional statement</a></dd>
+				<dd><a>conditional statement</a></dd>
+				<dd><a>for statement</a></dd>
+			</div>
+			<div>
+				<dt>compound tail</dt>
+				<dd><a>statement</a> end</dd>
+				<dd><a>statement</a> ; <a>compound tail</a></dd>
+			</div>
+			<div>
+				<dt>block head</dt>
+				<dd>begin <a>declaration</a></dd>
+				<dd><a>block head</a> ; <a>declaration</a></dd>
+			</div>
+			<div>
+				<dt>unlabelled block</dt>
+				<dd><a>block head</a> ; <a>compound tail</a></dd>
+			</div>
+			<div>
+				<dt>unlabelled compound</dt>
+				<dd>begin <a>compound tail</a></dd>
+			</div>
+			<div>
+				<dt>compound statement</dt>
+				<dd><a>unlabelled compound</a></dd>
+				<dd><a>label</a> : <a>compound statement</a></dd>
+			</div>
+			<div>
+				<dt>block</dt>
+				<dd><a>unlabelled block</a></dd>
+				<dd><a>label</a> : <a>block</a></dd>
+			</div>
+			<div>
+				<dt>program</dt>
+				<dd><a>block</a></dd>
+				<dd><a>compound statement</a></dd>
+			</div>
+		</dl>
+		<h3>Assignment statements</h3>
+		<dl>
+			<div>
+				<dt>destination</dt>
+				<dd><a>variable</a></dd>
+				<dd><a>procedure identifier</a></dd>
+			</div>
+			<div>
+				<dt>left part</dt>
+				<dd><a>destination</a> :=</dd>
+			</div>
+			<div>
+				<dt>left part list</dt>
+				<dd><a>left part</a></dd>
+				<dd><a>left part list</a> <a>left part</a></dd>
+			</div>
+			<div>
+				<dt>assignment statement</dt>
+				<dd><a>left part list</a> <a>arithmetic expression</a></dd>
+				<dd><a>left part list</a> <a>Boolean expression</a></dd>
+			</div>
+		</dl>
+		<h3>Go to statements</h3>
+		<dl>
+			<div>
+				<dt>go to statement</dt>
+				<dd>go to <a>designational expression</a></dd>
+			</div>
+		</dl>
+		<h3>Dummy statements</h3>
+		<dl>
+			<div>
+				<dt>dummy statement</dt>
+				<dd><a>empty</a></dd>
+			</div>
+		</dl>
+		<h3>Conditional statements</h3>
+		<dl>
+			<div>
+				<dt>if clause</dt>
+				<dd>if <a>Boolean expression</a> then</dd>
+			</div>
+			<div>
+				<dt>unconditional statement</dt>
+				<dd><a>basic statement</a></dd>
+				<dd><a>compound statement</a></dd>
+				<dd><a>block</a></dd>
+			</div>
+			<div>
+				<dt>if statement</dt>
+				<dd><a>if clause</a> <a>unconditional statement</a></dd>
+			</div>
+			<div>
+				<dt>conditional statement</dt>
+				<dd><a>if statement</a></dd>
+				<dd><a>if statement</a> else <a>statement</a></dd>
+				<dd><a>if clause</a> <a>for statement</a></dd>
+				<dd><a>label</a> : <a>conditional statement</a></dd>
+			</div>
+		</dl>
+		<h3>For statements</h3>
+		<dl>
+			<div>
+				<dt>for list element</dt>
+				<dd><a>arithmetic expression</a></dd>
+				<dd><a>arithmetic expression</a> step <a>arithmetic expression</a> until <a>arithmetic expression</a></dd>
+				<dd><a>arithmetic expression</a> while <a>Boolean expression</a></dd>
+			</div>
+			<div>
+				<dt>for list</dt>
+				<dd><a>for list element</a></dd>
+				<dd><a>for list</a> , <a>for list element</a></dd>
+			</div>
+			<div>
+				<dt>for clause</dt>
+				<dd>for <a>variable</a> := <a>for list</a> do</dd>
+			</div>
+			<div>
+				<dt>for statement</dt>
+				<dd><a>for clause</a> <a>statement</a></dd>
+				<dd><a>label</a> : <a>for statement</a></dd>
+			</div>
+		</dl>
+		<h3>Procedure statements</h3>
+		<dl>
+			<div>
+				<dt>actual parameter</dt>
+				<dd><a>string</a></dd>
+				<dd><a>expression</a></dd>
+				<dd><a>array identifier</a></dd>
+				<dd><a>switch identifier</a></dd>
+				<dd><a>procedure identifier</a></dd>
+			</div>
+			<div>
+				<dt>letter string</dt>
+				<dd><a>letter</a></dd>
+				<dd><a>letter string</a> <a>letter</a></dd>
+			</div>
+			<div>
+				<dt>parameter delimiter</dt>
+				<dd>,</dd>
+				<dd>) <a>letter string</a> : (</dd>
+			</div>
+			<div>
+				<dt>actual parameter list</dt>
+				<dd><a>actual parameter</a></dd>
+				<dd><a>actual parameter list</a> <a>parameter delimiter</a> <a>actual parameter</a></dd>
+			</div>
+			<div>
+				<dt>actual parameter part</dt>
+				<dd><a>empty</a></dd>
+				<dd>( <a>actual parameter list</a> )</dd>
+			</div>
+			<div>
+				<dt>procedure statement</dt>
+				<dd><a>procedure identifier</a> <a>actual parameter part</a></dd>
+			</div>
+		</dl>
+		<h2>Declarations</h2>
+		<dl>
+			<div>
+				<dt>declaration</dt>
+				<dd><a>type declaration</a></dd>
+				<dd><a>array declaration</a></dd>
+				<dd><a>switch declaration</a></dd>
+				<dd><a>procedure declaration</a></dd>
+			</div>
+		</dl>
+		<h3>Type declarations</h3>
+		<dl>
+			<div>
+				<dt>type list</dt>
+				<dd><a>simple variable</a></dd>
+				<dd><a>simple variable</a> , <a>type list</a></dd>
+			</div>
+			<div>
+				<dt>type</dt>
+				<dd>real</dd>
+				<dd>integer</dd>
+				<dd>Boolean</dd>
+			</div>
+			<div>
+				<dt>local or own</dt>
+				<dd><a>empty</a></dd>
+				<dd>own</dd>
+			</div>
+			<div>
+				<dt>type declaration</dt>
+				<dd><a>local or own</a> <a>type</a> <a>type list</a></dd>
+			</div>
+		</dl>
+		<h3>Array declarations</h3>
+		<dl>
+			<div>
+				<dt>lower bound</dt>
+				<dd><a>arithmetic expression</a></dd>
+			</div>
+			<div>
+				<dt>upper bound</dt>
+				<dd><a>arithmetic expression</a></dd>
+			</div>
+			<div>
+				<dt>bound pair</dt>
+				<dd><a>lower bound</a> : <a>upper bound</a></dd>
+			</div>
+			<div>
+				<dt>bound pair list</dt>
+				<dd><a>bound pair</a></dd>
+				<dd><a>bound pair list</a> , <a>bound pair</a></dd>
+			</div>
+			<div>
+				<dt>array segment</dt>
+				<dd><a>array identifier</a> [ <a>bound pair list</a> ]</dd>
+				<dd><a>array identifier</a> , <a>array segment</a></dd>
+			</div>
+			<div>
+				<dt>array list</dt>
+				<dd><a>array segment</a></dd>
+				<dd><a>array list</a> , <a>array segment</a></dd>
+			</div>
+			<div>
+				<dt>array declarer</dt>
+				<dd><a>type</a> array</dd>
+				<dd>array</dd>
+			</div>
+			<div>
+				<dt>array declaration</dt>
+				<dd><a>local or own</a> <a>array declarer</a> <a>array list</a></dd>
+			</div>
+		</dl>
+		<h3>Switch declarations</h3>
+		<dl>
+			<div>
+				<dt>switch list</dt>
+				<dd><a>designational expression</a></dd>
+				<dd><a>switch list</a> , <a>designational expression</a></dd>
+			</div>
+			<div>
+				<dt>switch declaration</dt>
+				<dd>switch <a>switch identifier</a> := <a>switch list</a></dd>
+			</div>
+		</dl>
+		<h3>Procedure declarations</h3>
+		<dl>
+			<div>
+				<dt>formal parameter</dt>
+				<dd><a>identifier</a></dd>
+			</div>
+			<div>
+				<dt>formal parameter list</dt>
+				<dd><a>formal parameter</a></dd>
+				<dd><a>formal parameter list</a> <a>parameter delimiter</a> <a>formal parameter</a></dd>
+			</div>
+			<div>
+				<dt>formal parameter part</dt>
+				<dd><a>empty</a></dd>
+				<dd>( <a>formal parameter list</a> )</dd>
+			</div>
+			<div>
+				<dt>identifier list</dt>
+				<dd><a>identifier</a></dd>
+				<dd><a>identifier list</a> , <a>identifier</a></dd>
+			</div>
+			<div>
+				<dt>value part</dt>
+				<dd>value <a>identifier list</a> ;</dd>
+				<dd><a>empty</a></dd>
+			</div>
+			<div>
+				<dt>specifier</dt>
+				<dd>string</dd>
+				<dd><a>type</a></dd>
+				<dd><a>array declarer</a></dd>
+				<dd>label</dd>
+				<dd>switch</dd>
+				<dd>procedure</dd>
+				<dd><a>type</a> procedure</dd>
+			</div>
+			<div>
+				<dt>specification part</dt>
+				<dd><a>empty</a></dd>
+				<dd><a>specifier</a> <a>identifier list</a> ;</dd>
+				<dd><a>specification part</a> <a>specifier</a> <a>identifier list</a> ;</dd>
+			</div>
+			<div>
+				<dt>procedure heading</dt>
+				<dd><a>procedure identifier</a> <a>formal parameter part</a> ; <a>value part</a> <a>specification part</a></dd>
+			</div>
+			<div>
+				<dt>procedure body</dt>
+				<dd><a>statement</a></dd>
+			</div>
+			<div>
+				<dt>procedure declaration</dt>
+				<dd>procedure <a>procedure heading</a> <a>procedure body</a></dd>
+				<dd><a>type</a> procedure <a>procedure heading</a> <a>procedure body</a></dd>
+			</div>
+		</dl>
+		<h2>Transcription of basic symbols</h2>
+		<table>
+			<thead>
+				<tr>
+					<th scope="col">The UTF-8 symbol</th>
+					<th scope="col">is replaced by the ASCII symbol</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>(</td>
+					<td>(</td>
+				</tr>
+				<tr>
+					<td>)</td>
+					<td>)</td>
+				</tr>
+				<tr>
+					<td>[</td>
+					<td>[</td>
+				</tr>
+				<tr>
+					<td>]</td>
+					<td>]</td>
+				</tr>
+				<tr>
+					<td>,</td>
+					<td>,</td>
+				</tr>
+				<tr>
+					<td>;</td>
+					<td>;</td>
+				</tr>
+				<tr>
+					<td>:</td>
+					<td>:</td>
+				</tr>
+				<tr>
+					<td>:=</td>
+					<td>:=</td>
+				</tr>
+				<tr>
+					<td>&equiv;</td>
+					<td>&lt;=&gt;</td>
+				</tr>
+				<tr>
+					<td>&sup;</td>
+					<td>=&gt;</td>
+				</tr>
+				<tr>
+					<td>&or;</td>
+					<td>\/</td>
+				</tr>
+				<tr>
+					<td>&and;</td>
+					<td>/\</td>
+				</tr>
+				<tr>
+					<td>&not;</td>
+					<td>~</td>
+				</tr>
+				<tr>
+					<td>=</td>
+					<td>=</td>
+				</tr>
+				<tr>
+					<td>&ne;</td>
+					<td>&lt;&gt;</td>
+				</tr>
+				<tr>
+					<td>&lt;</td>
+					<td>&lt;</td>
+				</tr>
+				<tr>
+					<td>&geq;</td>
+					<td>&gt;=</td>
+				</tr>
+				<tr>
+					<td>&gt;</td>
+					<td>&gt;</td>
+				</tr>
+				<tr>
+					<td>&leq;</td>
+					<td>&lt;=</td>
+				</tr>
+				<tr>
+					<td>&plus;</td>
+					<td>+</td>
+				</tr>
+				<tr>
+					<td>&minus;</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>&times;</td>
+					<td>*</td>
+				</tr>
+				<tr>
+					<td>/</td>
+					<td>/</td>
+				</tr>
+				<tr>
+					<td>&divide;</td>
+					<td>//</td>
+				</tr>
+				<tr>
+					<td>&uarr;</td>
+					<td>**</td>
+				</tr>
+				<tr>
+					<td>&#11810;</td>
+					<td>`</td>
+				</tr>
+				<tr>
+					<td>&#11811;</td>
+					<td>'</td>
+				</tr>
+				<tr>
+					<td>.</td>
+					<td>.</td>
+				</tr>
+				<tr>
+					<td>&#9192;</td>
+					<td>e</td>
+				</tr>
+				<tr>
+					<td>&blank;</td>
+					<td> </td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

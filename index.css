@@ -19,7 +19,7 @@
 	font-size: inherit;
 }
 html {
-	font-size: 10px; /* 1rem */
+	font-size: 6.25pt; /* 1rem */
 }
 body {
 	margin: 0;
@@ -206,7 +206,6 @@ a:not([href]) {
 	html {
 		float: left;
 		width: 100%;
-		font-size: 6.25pt;
 	}
 	body {
 		box-decoration-break: clone;
@@ -214,5 +213,18 @@ a:not([href]) {
 	}
 	hr {
 		margin: 2rem 2rem -2rem 2rem;
+	}
+}
+@media screen {
+	html {
+		padding: 2rem;
+		background: #333;
+	}
+	body {
+		max-width: var(--outer-size-x);
+		min-height: var(--outer-size-y);
+		margin: auto;
+		padding: var(--padding-y) var(--padding-x);
+		background: #fff;
 	}
 }

@@ -22,16 +22,11 @@ html {
 	font-size: 6.25pt; /* 1rem */
 }
 body {
+	display: flow-root;
 	margin: 0;
 	line-height: 1.25;
 	font-family: serif;
 	font-size: 1.6rem; /* 1.6rem */
-}
-body::before,
-body::after {
-	content: "";
-	display: table;
-	pointer-events: none;
 }
 h1 {
 	margin: 2rem;
@@ -64,9 +59,6 @@ h4 {
 }
 h4::before {
 	content: counter(h2) "." counter(h3) "." counter(h4) ". ";
-}
-p {
-	margin: 2rem;
 }
 dl {
 	margin: 2rem;
@@ -162,18 +154,6 @@ table > tbody > tr > td::after {
 	box-shadow: 0 0 0 .1rem currentColor, inset 0 0 0 .1rem currentColor;
 	pointer-events: none;
 }
-hr {
-	display: table;
-	width: calc(100% - 4rem);
-	height: 0;
-	margin: 0;
-	border: 0;
-	-webkit-page-break-before: always;
-	-webkit-column-break-before: always;
-	-webkit-region-break-before: always;
-	page-break-before: always;
-	break-before: page;
-}
 a {
 	font-style: italic;
 	font-weight: normal;
@@ -210,9 +190,6 @@ a:not([href]) {
 	body {
 		box-decoration-break: clone;
 		margin: calc(var(--margin-y) + var(--padding-y)) calc(var(--margin-x) + var(--padding-x));
-	}
-	hr {
-		margin: 2rem 2rem -2rem 2rem;
 	}
 }
 @media screen {

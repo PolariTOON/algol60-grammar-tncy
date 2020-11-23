@@ -1,7 +1,6 @@
 const dtElements = document.querySelectorAll("dt");
 const aElements = document.querySelectorAll("a");
 const trim = /^[\t\f\n\r ]+|[\t\f\n\r ]+$/g;
-const escape = /[^-0-9A-Z_a-z]/g;
 for (const dtElement of dtElements) {
 	const textContent = dtElement.textContent.replace(trim);
 	const aElement = document.createElement("a");

@@ -7,14 +7,15 @@ for (const dtElement of dtElements) {
 	const aElement = document.createElement("a");
 	aElement.append(...dtElement.childNodes);
 	aElement.href = `#${textContent}`;
-	dtElement.id = textContent;
+	const id = CSS.escape(textContent);
+	if (document.querySelector(`dt#${id}`) === null) {
+		dtElement.id = textContent;
+	}
 	dtElement.append(aElement);
 }
 for (const aElement of aElements) {
 	const textContent = aElement.textContent.replace(trim);
-	const id = textContent.replace(escape, (character) => {
-		return `\\${character.codePointAt(0).toString(16)} `;
-	});
+	const id = CSS.escape(textContent);
 	if (document.querySelector(`dt#${id}`) !== null) {
 		aElement.href = `#${textContent}`;
 	}

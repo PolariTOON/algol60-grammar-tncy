@@ -77,9 +77,9 @@ dl > div {
 	padding: 1rem 2rem;
 }
 dl > div > dt {
+	position: relative;
 	z-index: 1;
 	white-space: pre-wrap;
-	transform: perspective(0);
 }
 dl > div > dt:target {
 	background-color: #fc3;
@@ -95,10 +95,10 @@ dl > div > dt::after {
 	pointer-events: none;
 }
 dl > div > dd {
+	position: relative;
 	margin-left: 0;
 	padding-left: 8ch;
 	white-space: pre-wrap;
-	transform: perspective(0);
 }
 dl > div > dd::before {
 	display: inline-block;
@@ -130,11 +130,11 @@ table {
 	font-weight: bold;
 }
 table > thead > tr > th {
+	position: relative;
 	z-index: 1;
 	vertical-align: middle;
 	text-align: center;
 	padding: 1rem 2rem;
-	transform: perspective(0);
 	box-shadow: 0 0 0 .1rem currentColor, inset 0 0 0 .1rem currentColor;
 }
 table > thead > tr > th::after {
@@ -148,9 +148,9 @@ table > thead > tr > th::after {
 	pointer-events: none;
 }
 table > tbody > tr > td {
+	position: relative;
 	padding: 1rem 2rem;
 	white-space: pre-wrap;
-	transform: perspective(0);
 }
 table > tbody > tr > td::after {
 	content: "";

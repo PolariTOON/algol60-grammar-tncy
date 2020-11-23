@@ -1,3 +1,9 @@
+@font-face {
+	font-family: "STIX Two Math";
+	font-style: normal;
+	font-weight: normal;
+	src: url("./stix-two-math.woff2") format("woff2");
+}
 :root {
 	--outer-size-x: 21cm;
 	--outer-size-y: 29.7cm;
@@ -25,8 +31,9 @@ body {
 	display: flow-root;
 	margin: 0;
 	line-height: 1.25;
-	font-family: serif;
+	font-family: "STIX Two Math", serif;
 	font-size: 1.6rem; /* 1.6rem */
+	font-weight: bold;
 }
 h1 {
 	margin: 2rem;
@@ -62,8 +69,6 @@ h4::before {
 }
 dl {
 	margin: 2rem;
-	font-family: monospace;
-	font-weight: bold;
 }
 dl > div {
 	padding: 1rem 2rem;
@@ -98,7 +103,7 @@ dl > div > dd::before {
 	text-indent: -8ch;
 }
 dl > div > dt + dd::before {
-	content: "::=\a0 ";
+	content: "\2a74 \a0 ";
 }
 dl > div > dd + dd::before {
 	content: "|\a0 ";
@@ -118,8 +123,6 @@ table {
 	border-spacing: 0;
 	margin: 2rem;
 	width: calc(100% - 4rem);
-	font-family: monospace;
-	font-weight: bold;
 }
 table > thead > tr > th {
 	position: relative;
